@@ -1,0 +1,515 @@
+🔁 Starting recon-all for 0028316
+Adding options -fix-ento-wm -transfer-base-bfs -fix-vsinus -fix-mca-dura -fix-ga -fix-acj -synthstrip -synthseg -synthmorph 
+fs-check-version --s 0028316 --o /tmp/tmp.It1sVx
+Mon May 12 01:29:32 UTC 2025
+
+setenv SUBJECTS_DIR /home/ubuntu/output/chess
+cd /home/ubuntu
+/usr/local/freesurfer/8.0.0//bin/fs-check-version --s 0028316 --o /tmp/tmp.It1sVx
+-rwxr-xr-x 1 root root 18565 Feb  4 01:30 /usr/local/freesurfer/8.0.0//bin/fs-check-version
+
+freesurfer-linux-ubuntu22_x86_64-8.0.0-20250204-0f2bd3a
+$Id$
+Linux 9cc122b6-33ec-4f6b-b5dd-def3a54d968a-rammri 5.15.0-127-generic #137-Ubuntu SMP Fri Nov 8 15:21:01 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
+pid 403066
+Current FS Version freesurfer-linux-ubuntu22_x86_64-8.0.0-20250204-0f2bd3a
+Subject does not have a bstampfile, copying /usr/local/freesurfer/8.0.0//build-stamp.txt
+Subject FS Version: freesurfer-linux-ubuntu22_x86_64-8.0.0-20250204-0f2bd3a
+No constraints on version because REQ=UnSet and FsVerFile=NotThere
+#@#% fs-check-version match = 1
+fs-check-version Done
+INFO: SUBJECTS_DIR is /home/ubuntu/output/chess
+Actual FREESURFER_HOME /usr/local/freesurfer/8.0.0
+Linux 9cc122b6-33ec-4f6b-b5dd-def3a54d968a-rammri 5.15.0-127-generic #137-Ubuntu SMP Fri Nov 8 15:21:01 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
+/home/ubuntu/output/chess/0028316
+
+ mri_convert /home/ubuntu/chessdata/imaging_data_ctrl/0028316/anat_1/anat.nii.gz /home/ubuntu/output/chess/0028316/mri/orig/001.mgz 
+
+mri_convert /home/ubuntu/chessdata/imaging_data_ctrl/0028316/anat_1/anat.nii.gz /home/ubuntu/output/chess/0028316/mri/orig/001.mgz 
+INFO: using NIfTI-1 sform (sform_code=1)
+reading from /home/ubuntu/chessdata/imaging_data_ctrl/0028316/anat_1/anat.nii.gz...
+TR=1900.00, TE=0.00, TI=0.00, flip angle=0.00
+i_ras = (-0.999217, 0.0312812, -0.0242095)
+j_ras = (0.0312903, 0.99951, 1.89091e-08)
+k_ras = (-0.0241977, 0.000757505, 0.999707)
+writing to /home/ubuntu/output/chess/0028316/mri/orig/001.mgz...
+@#@FSTIME  2025:05:12:01:29:32 mri_convert N 2 e 3.09 S 0.02 U 3.03 P 99% M 52588 F 0 R 11745 W 0 c 7 w 5 I 14936 O 15176 L 1.00 1.00 1.25
+@#@FSLOADPOST 2025:05:12:01:29:35 mri_convert N 2 1.00 1.00 1.25
+#--------------------------------------------
+#@# MotionCor Mon May 12 01:29:36 UTC 2025
+Found 1 runs
+/home/ubuntu/output/chess/0028316/mri/orig/001.mgz
+Checking for (invalid) multi-frame inputs...
+Only one run found so motion
+correction will not be performed. I'll
+copy the run to rawavg and continue.
+
+ cp /home/ubuntu/output/chess/0028316/mri/orig/001.mgz /home/ubuntu/output/chess/0028316/mri/rawavg.mgz 
+
+
+ mri_info /home/ubuntu/output/chess/0028316/mri/rawavg.mgz 
+
+rawavg.mgz ========================================
+Volume information for /home/ubuntu/output/chess/0028316/mri/rawavg.mgz
+          type: MGH
+        intent: MRI (0)
+    dimensions: 176 x 256 x 256
+   voxel sizes: 1.000000, 1.000000, 1.000000
+          type: FLOAT (3)
+           fov: 256.000
+           dof: 1
+        xstart: -88.0, xend: 88.0
+        ystart: -128.0, yend: 128.0
+        zstart: -128.0, zend: 128.0
+            TR: 1900.00 msec, TE: 0.00 msec, TI: 0.00 msec, flip angle: 0.00 degrees
+       nframes: 1
+       PhEncDir: UNKNOWN
+       FieldStrength: 0.000000
+ras xform present
+    xform info: x_r =  -0.9992, y_r =   0.0313, z_r =  -0.0242, c_r =     0.1094
+              : x_a =   0.0313, y_a =   0.9995, z_a =   0.0008, c_a =    18.6139
+              : x_s =  -0.0242, y_s =   0.0000, z_s =   0.9997, c_s =   -10.9696
+
+talairach xfm : 
+Orientation   : LAS
+Primary Slice Direction: axial
+
+voxel to ras transform:
+               -0.9992   0.0313  -0.0242    87.1327
+                0.0313   0.9995   0.0008  -112.1731
+               -0.0242   0.0000   0.9997  -136.8016
+                0.0000   0.0000   0.0000     1.0000
+
+voxel-to-ras determinant -1
+
+ras to voxel transform:
+               -0.9992   0.0313  -0.0242    87.2615
+                0.0313   0.9995   0.0000   109.3918
+               -0.0242   0.0008   0.9997   138.9549
+               -0.0000  -0.0000  -0.0000     1.0000
+/home/ubuntu/output/chess/0028316
+
+ mri_convert /home/ubuntu/output/chess/0028316/mri/rawavg.mgz /home/ubuntu/output/chess/0028316/mri/orig.mgz --conform 
+
+mri_convert /home/ubuntu/output/chess/0028316/mri/rawavg.mgz /home/ubuntu/output/chess/0028316/mri/orig.mgz --conform 
+reading from /home/ubuntu/output/chess/0028316/mri/rawavg.mgz...
+TR=1900.00, TE=0.00, TI=0.00, flip angle=0.00
+i_ras = (-0.999217, 0.0312812, -0.0242095)
+j_ras = (0.0312903, 0.99951, 1.89091e-08)
+k_ras = (-0.0241977, 0.000757505, 0.999707)
+volume geometry:
+valid   : -250821568
+extent  : (256, 256, 256)
+voxel   : ( 1.0000,  1.0000,  1.0000)
+x_(ras) : (-1.0000,  0.0000,  0.0000)
+y_(ras) : ( 0.0000,  0.0000, -1.0000)
+z_(ras) : ( 0.0000,  1.0000,  0.0000)
+c_(ras) : ( 0.1094, 18.6139, -10.9696)
+shears  : ( 0.0000,  0.0000,  0.0000)
+file    : /home/ubuntu/output/chess/0028316/mri/rawavg.mgz
+changing data type from float to uchar (noscale = 0)...
+MRIchangeType: Building histogram 0 1041 1000, flo=0, fhi=0.999, dest_type=0
+Reslicing using trilinear interpolation 
+writing to /home/ubuntu/output/chess/0028316/mri/orig.mgz...
+@#@FSTIME  2025:05:12:01:29:39 mri_convert N 3 e 4.11 S 0.03 U 4.07 P 99% M 63936 F 0 R 22871 W 0 c 30 w 1 I 0 O 7552 L 1.08 1.02 1.26
+@#@FSLOADPOST 2025:05:12:01:29:43 mri_convert N 3 1.23 1.05 1.27
+
+ mri_add_xform_to_header -c /home/ubuntu/output/chess/0028316/mri/transforms/talairach.xfm /home/ubuntu/output/chess/0028316/mri/orig.mgz /home/ubuntu/output/chess/0028316/mri/orig.mgz 
+
+INFO: extension is mgz
+@#@FSTIME  2025:05:12:01:29:43 mri_add_xform_to_header N 4 e 0.91 S 0.02 U 0.89 P 100% M 23320 F 0 R 4569 W 0 c 41 w 1 I 0 O 7552 L 1.23 1.05 1.27
+@#@FSLOADPOST 2025:05:12:01:29:44 mri_add_xform_to_header N 4 1.23 1.05 1.27
+
+ mri_info /home/ubuntu/output/chess/0028316/mri/orig.mgz 
+
+orig.mgz ========================================
+Volume information for /home/ubuntu/output/chess/0028316/mri/orig.mgz
+          type: MGH
+        intent: MRI (0)
+    dimensions: 256 x 256 x 256
+   voxel sizes: 1.000000, 1.000000, 1.000000
+          type: UCHAR (0)
+           fov: 256.000
+           dof: 1
+        xstart: -128.0, xend: 128.0
+        ystart: -128.0, yend: 128.0
+        zstart: -128.0, zend: 128.0
+            TR: 1900.00 msec, TE: 0.00 msec, TI: 0.00 msec, flip angle: 0.00 degrees
+       nframes: 1
+       PhEncDir: UNKNOWN
+       FieldStrength: 0.000000
+ras xform present
+    xform info: x_r =  -1.0000, y_r =   0.0000, z_r =   0.0000, c_r =     0.1094
+              : x_a =  -0.0000, y_a =   0.0000, z_a =   1.0000, c_a =    18.6139
+              : x_s =   0.0000, y_s =  -1.0000, z_s =   0.0000, c_s =   -10.9696
+
+talairach xfm : /home/ubuntu/output/chess/0028316/mri/transforms/talairach.xfm
+Orientation   : LIA
+Primary Slice Direction: coronal
+
+voxel to ras transform:
+               -1.0000   0.0000   0.0000   128.1094
+               -0.0000   0.0000   1.0000  -109.3861
+                0.0000  -1.0000   0.0000   117.0304
+                0.0000   0.0000   0.0000     1.0000
+
+voxel-to-ras determinant -1
+
+ras to voxel transform:
+               -1.0000   0.0000  -0.0000   128.1094
+               -0.0000   0.0000  -1.0000   117.0304
+               -0.0000   1.0000  -0.0000   109.3861
+               -0.0000  -0.0000  -0.0000     1.0000
+lta_convert --inlta identity.nofile --src /home/ubuntu/output/chess/0028316/mri/rawavg.mgz --trg /home/ubuntu/output/chess/0028316/mri/orig.mgz --outlta /home/ubuntu/output/chess/0028316/mri/rawavg2orig.lta
+8.0.0
+
+--inlta: identity.nofile input LTA transform.
+--src: /home/ubuntu/output/chess/0028316/mri/rawavg.mgz src image (geometry).
+--trg: /home/ubuntu/output/chess/0028316/mri/orig.mgz trg image (geometry).
+--outlta: /home/ubuntu/output/chess/0028316/mri/rawavg2orig.lta output LTA.
+ LTA read, type : 1
+ 1.00000   0.00000   0.00000   0.00000;
+ 0.00000   1.00000   0.00000   0.00000;
+ 0.00000   0.00000   1.00000   0.00000;
+ 0.00000   0.00000   0.00000   1.00000;
+Writing  LTA to file /home/ubuntu/output/chess/0028316/mri/rawavg2orig.lta...
+lta_convert successful.
+@#@FSTIME  2025:05:12:01:29:45 lta_convert N 8 e 0.23 S 0.01 U 0.22 P 99% M 6684 F 0 R 260 W 0 c 1 w 1 I 0 O 8 L 1.23 1.05 1.27
+@#@FSLOADPOST 2025:05:12:01:29:45 lta_convert N 8 1.23 1.05 1.27
+
+ mri_synthstrip --threads 1 -i /home/ubuntu/output/chess/0028316/mri/orig.mgz -o /home/ubuntu/output/chess/0028316/mri/synthstrip.mgz 
+
+Configuring model on the CPU
+Running SynthStrip model version 1
+Input image read from: /home/ubuntu/output/chess/0028316/mri/orig.mgz
+Processing frame (of 1): 1 done
+Masked image saved to: /home/ubuntu/output/chess/0028316/mri/synthstrip.mgz
+
+If you use SynthStrip in your analysis, please cite:
+----------------------------------------------------
+SynthStrip: Skull-Stripping for Any Brain Image
+A Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann
+NeuroImage 206 (2022), 119474
+https://doi.org/10.1016/j.neuroimage.2022.119474
+
+Website: https://synthstrip.io
+
+@#@FSTIME  2025:05:12:01:29:45 mri_synthstrip N 6 e 33.88 S 6.57 U 27.40 P 100% M 4504268 F 6 R 4637519 W 0 c 287 w 26 I 8 O 3088 L 1.23 1.05 1.27
+@#@FSLOADPOST 2025:05:12:01:30:19 mri_synthstrip N 6 2.02 1.27 1.33
+
+ mri_synthseg --i /home/ubuntu/output/chess/0028316/mri/orig.mgz --o /home/ubuntu/output/chess/0028316/mri/synthseg.rca.mgz --threads 1 --vol /home/ubuntu/output/chess/0028316/stats/synthseg.vol.csv --keepgeom --addctab --cpu 
+
+🔁 Starting recon-all for 0028316
+Adding options -fix-ento-wm -transfer-base-bfs -fix-vsinus -fix-mca-dura -fix-ga -fix-acj -synthstrip -synthseg -synthmorph 
+ERROR: You are trying to re-run an existing subject with (possibly)
+ new input data (-i). If this is truly new input data, you should delete
+ the subject folder and re-run, or specify a different subject name.
+ If you are just continuing an analysis of an existing subject, then 
+ omit all -i flags.
+❌ recon-all failed for 0028316
+SynthSeg 2.0
+using CPU, hiding all CUDA_VISIBLE_DEVICES
+using 1 thread
+addctab  True
+predicting 1/1
+1/1 [==============================] - ETA: 0s1/1 [==============================] - 537s 537s/step
+Reslicing to have same geom as the input [1. 1. 1.]
+
+segmentation  saved in:    /home/ubuntu/output/chess/0028316/mri/synthseg.rca.mgz
+volumes saved in:          /home/ubuntu/output/chess/0028316/stats/synthseg.vol.csv
+
+#@# mri_synthseg vmpeak  16478348
+
+If you use this tool in a publication, please cite:
+SynthSeg: Segmentation of brain MRI scans of any contrast and resolution without retraining
+B. Billot, D.N. Greve, O. Puonti, A. Thielscher, K. Van Leemput, B. Fischl, A.V. Dalca, J.E. Iglesias
+Medical Image Analysis, 2023.
+@#@FSTIME  2025:05:12:01:30:19 mri_synthseg N 11 e 565.64 S 28.42 U 537.42 P 100% M 14025720 F 0 R 20164714 W 0 c 1488 w 525 I 64 O 3040 L 2.02 1.27 1.33
+@#@FSLOADPOST 2025:05:12:01:39:44 mri_synthseg N 11 3.00 2.75 2.11
+~/output/chess/0028316/mri ~/output/chess/0028316 
+~/output/chess/0028316 
+csvprint: Command not found.
+~/output/chess/0028316/mri/transforms ~/output/chess/0028316 
+~/output/chess/0028316 
+Mon May 12 01:39:44 UTC 2025
+
+setenv SUBJECTS_DIR /home/ubuntu/output/chess
+cd /home/ubuntu/output/chess/0028316
+/usr/local/freesurfer/8.0.0//bin/fs-synthmorph-reg --i /home/ubuntu/output/chess/0028316/mri/synthstrip.mgz --t /usr/local/freesurfer/8.0.0//average/mni305.cor.stripped.mgz --affine-only --o /home/ubuntu/output/chess/0028316/mri/transforms/synthmorph.mni305 --threads 1
+-rwxr-xr-x 1 root root 30890 Feb  4 01:30 /usr/local/freesurfer/8.0.0//bin/fs-synthmorph-reg
+
+freesurfer-linux-ubuntu22_x86_64-8.0.0-20250204-0f2bd3a
+$Id$
+Linux 9cc122b6-33ec-4f6b-b5dd-def3a54d968a-rammri 5.15.0-127-generic #137-Ubuntu SMP Fri Nov 8 15:21:01 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
+pid 404864
+Mon May 12 01:39:44 UTC 2025
+
+
+
+mri_synthmorph -m affine -t /home/ubuntu/output/chess/0028316/mri/transforms/synthmorph.mni305/aff.lta /home/ubuntu/output/chess/0028316/mri/synthstrip.mgz /usr/local/freesurfer/8.0.0/average/mni305.cor.stripped.mgz -j 1
+#@# mri_synthmorph: affine, threads: 1, VmPeak: 6588944
+Thank you for choosing SynthMorph. Please cite us!
+
+SynthMorph: learning contrast-invariant registration without acquired images
+Hoffmann M, Billot B, Greve DN, Iglesias JE, Fischl B, Dalca AV
+IEEE Transactions on Medical Imaging, 41 (3), 543-558, 2022
+https://doi.org/10.1109/TMI.2021.3116879
+
+Anatomy-specific acquisition-agnostic affine registration learned from
+fictitious images
+Hoffmann M, Hoopes A, Fischl B*, Dalca AV* (*equal contribution)
+SPIE Medical Imaging: Image Processing, 12464, 1246402, 2023
+https://doi.org/10.1117/12.2653251
+https://synthmorph.io/#papers (PDF)
+
+Anatomy-aware and acquisition-agnostic joint registration with SynthMorph
+Hoffmann M, Hoopes A, Greve DN, Fischl B*, Dalca AV* (*equal contribution)
+Imaging Neuroscience, 2, 1-33, 2024
+https://doi.org/10.1162/imag_a_00197
+
+Website: https://synthmorph.io
+@#@FSTIME  2025:05:12:01:39:44 mri_synthmorph N 8 e 65.16 S 12.02 U 53.02 P 99% M 5349236 F 0 R 9337105 W 0 c 158 w 215 I 256 O 432 L 3.00 2.75 2.11
+@#@FSLOADPOST 2025:05:12:01:40:50 mri_synthmorph N 8 3.00 2.80 2.17
+~/output/chess/0028316/mri/transforms/synthmorph.mni305 ~/output/chess/0028316 
+~/output/chess/0028316 
+lta_convert --invert --inlta /home/ubuntu/output/chess/0028316/mri/transforms/synthmorph.mni305/aff.lta --outlta /home/ubuntu/output/chess/0028316/mri/transforms/synthmorph.mni305/reg.targ_to_invol.lta
+8.0.0
+
+--invert: will invert transform.
+--inlta: /home/ubuntu/output/chess/0028316/mri/transforms/synthmorph.mni305/aff.lta input LTA transform.
+--outlta: /home/ubuntu/output/chess/0028316/mri/transforms/synthmorph.mni305/reg.targ_to_invol.lta output LTA.
+ LTA read, type : 1
+ 0.95530  -0.02821   0.06737  -1.56460;
+ 0.02148   1.05537   0.18963  -33.45311;
+-0.05166  -0.12151   1.05446   10.36043;
+ 0.00000   0.00000   0.00000   1.00000;
+Writing  LTA to file /home/ubuntu/output/chess/0028316/mri/transforms/synthmorph.mni305/reg.targ_to_invol.lta...
+lta_convert successful.
+@#@FSTIME  2025:05:12:01:40:50 lta_convert N 5 e 0.00 S 0.00 U 0.00 P 100% M 5900 F 0 R 225 W 0 c 0 w 1 I 0 O 8 L 3.00 2.80 2.17
+@#@FSLOADPOST 2025:05:12:01:40:50 lta_convert N 5 3.00 2.80 2.17
+
+
+
+
+To check affine registration
+tkregisterfv --mov /home/ubuntu/output/chess/0028316/mri/synthstrip.mgz --targ /usr/local/freesurfer/8.0.0/average/mni305.cor.stripped.mgz --reg /home/ubuntu/output/chess/0028316/mri/transforms/synthmorph.mni305/aff.lta
+
+AffineOnly specified, so exiting now
+ 
+Started at Mon May 12 01:39:44 UTC 2025 
+Ended   at Mon May 12 01:40:50 UTC 2025
+Fs-Synthmorph-Reg-Run-Time-Sec 66
+Fs-Synthmorph-Reg-Run-Time-Min 1.10
+Fs-Synthmorph-Reg-Run-Time-Hours 0.02
+ 
+fs-synthmorph-reg Done
+@#@FSTIME  2025:05:12:01:39:44 fs-synthmorph-reg N 9 e 65.29 S 12.06 U 53.12 P 99% M 5349236 F 0 R 9355802 W 0 c 167 w 536 I 256 O 456 L 3.00 2.75 2.11
+@#@FSLOADPOST 2025:05:12:01:40:50 fs-synthmorph-reg N 9 3.00 2.80 2.17
+~/output/chess/0028316/mri/transforms ~/output/chess/0028316 
+8.0.0
+
+--ltavox2vox: output LTA as VOX_TO_VOX transform.
+--inlta: synthmorph.mni305/aff.lta input LTA transform.
+--outlta: talairach.xfm.lta output LTA.
+ LTA read, type : 1
+ 0.95530  -0.02821   0.06737  -1.56460;
+ 0.02148   1.05537   0.18963  -33.45311;
+-0.05166  -0.12151   1.05446   10.36043;
+ 0.00000   0.00000   0.00000   1.00000;
+Writing  LTA to file talairach.xfm.lta...
+lta_convert successful.
+8.0.0
+
+--inlta: talairach.xfm.lta input LTA transform.
+--outmni: talairach.xfm output MNI/XFM matrix.
+ LTA read, type : 1
+ 0.95530  -0.02821   0.06737  -1.56461;
+ 0.02148   1.05537   0.18963  -33.45311;
+-0.05166  -0.12151   1.05446   10.36043;
+ 0.00000   0.00000   0.00000   1.00000;
+lta_convert successful.
+~/output/chess/0028316 
+
+ fs-synthmorph-reg --s 0028316 --threads 1 --i /home/ubuntu/output/chess/0028316/mri/orig.mgz --test 
+
+Mon May 12 01:40:50 UTC 2025
+
+setenv SUBJECTS_DIR /home/ubuntu/output/chess
+cd /home/ubuntu/output/chess/0028316
+/usr/local/freesurfer/8.0.0//bin/fs-synthmorph-reg --s 0028316 --threads 1 --i /home/ubuntu/output/chess/0028316/mri/orig.mgz --test
+-rwxr-xr-x 1 root root 30890 Feb  4 01:30 /usr/local/freesurfer/8.0.0//bin/fs-synthmorph-reg
+
+freesurfer-linux-ubuntu22_x86_64-8.0.0-20250204-0f2bd3a
+$Id$
+Linux 9cc122b6-33ec-4f6b-b5dd-def3a54d968a-rammri 5.15.0-127-generic #137-Ubuntu SMP Fri Nov 8 15:21:01 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
+pid 405133
+mri_mask -bb 3 /home/ubuntu/output/chess/0028316/mri/orig.mgz /home/ubuntu/output/chess/0028316/mri/orig.mgz /home/ubuntu/output/chess/0028316/mri/transforms/synthmorph.1.0mm.1.0mm/tmp/invol.crop.nii.gz
+cropping npad = 3
+DoAbs = 0
+Computing bounding box, npad = 3, 3, 3, 3, 3, 3
+33 18 17  190 189 215
+maskval=0, outval=0
+Writing masked volume to /home/ubuntu/output/chess/0028316/mri/transforms/synthmorph.1.0mm.1.0mm/tmp/invol.crop.nii.gz...done.
+lta_convert --inlta identity.nofile --src /home/ubuntu/output/chess/0028316/mri/transforms/synthmorph.1.0mm.1.0mm/tmp/invol.crop.nii.gz --trg /home/ubuntu/output/chess/0028316/mri/orig.mgz --outlta /home/ubuntu/output/chess/0028316/mri/transforms/synthmorph.1.0mm.1.0mm/tmp/reg.crop-to-invol.lta
+8.0.0
+
+--inlta: identity.nofile input LTA transform.
+--src: /home/ubuntu/output/chess/0028316/mri/transforms/synthmorph.1.0mm.1.0mm/tmp/invol.crop.nii.gz src image (geometry).
+--trg: /home/ubuntu/output/chess/0028316/mri/orig.mgz trg image (geometry).
+--outlta: /home/ubuntu/output/chess/0028316/mri/transforms/synthmorph.1.0mm.1.0mm/tmp/reg.crop-to-invol.lta output LTA.
+ LTA read, type : 1
+ 1.00000   0.00000   0.00000   0.00000;
+ 0.00000   1.00000   0.00000   0.00000;
+ 0.00000   0.00000   1.00000   0.00000;
+ 0.00000   0.00000   0.00000   1.00000;
+Writing  LTA to file /home/ubuntu/output/chess/0028316/mri/transforms/synthmorph.1.0mm.1.0mm/tmp/reg.crop-to-invol.lta...
+lta_convert successful.
+Mon May 12 01:40:52 UTC 2025
+
+
+
+mri_synthmorph -m affine -t /home/ubuntu/output/chess/0028316/mri/transforms/synthmorph.1.0mm.1.0mm/aff.lta /home/ubuntu/output/chess/0028316/mri/transforms/synthmorph.1.0mm.1.0mm/tmp/invol.crop.nii.gz /usr/local/freesurfer/8.0.0//average/mni_icbm152_nlin_asym_09c/reg-targets/mni152.1.0mm.cropped.nii.gz -j 1
+#@# mri_synthmorph: affine, threads: 1, VmPeak: 6685412
+Thank you for choosing SynthMorph. Please cite us!
+
+SynthMorph: learning contrast-invariant registration without acquired images
+Hoffmann M, Billot B, Greve DN, Iglesias JE, Fischl B, Dalca AV
+IEEE Transactions on Medical Imaging, 41 (3), 543-558, 2022
+https://doi.org/10.1109/TMI.2021.3116879
+
+Anatomy-specific acquisition-agnostic affine registration learned from
+fictitious images
+Hoffmann M, Hoopes A, Fischl B*, Dalca AV* (*equal contribution)
+SPIE Medical Imaging: Image Processing, 12464, 1246402, 2023
+https://doi.org/10.1117/12.2653251
+https://synthmorph.io/#papers (PDF)
+
+Anatomy-aware and acquisition-agnostic joint registration with SynthMorph
+Hoffmann M, Hoopes A, Greve DN, Fischl B*, Dalca AV* (*equal contribution)
+Imaging Neuroscience, 2, 1-33, 2024
+https://doi.org/10.1162/imag_a_00197
+
+Website: https://synthmorph.io
+@#@FSTIME  2025:05:12:01:40:52 mri_synthmorph N 8 e 59.27 S 12.32 U 46.94 P 99% M 5454796 F 0 R 9142512 W 0 c 169 w 166 I 16 O 432 L 3.00 2.80 2.18
+@#@FSLOADPOST 2025:05:12:01:41:51 mri_synthmorph N 8 3.00 2.84 2.23
+Mon May 12 01:41:51 UTC 2025
+
+
+
+mri_concatenate_lta -invert1 -invertout /home/ubuntu/output/chess/0028316/mri/transforms/synthmorph.1.0mm.1.0mm/aff.lta /home/ubuntu/output/chess/0028316/mri/transforms/synthmorph.1.0mm.1.0mm/tmp/reg.crop-to-invol.lta /home/ubuntu/output/chess/0028316/mri/transforms/synthmorph.1.0mm.1.0mm/tmp/reg.invol_to_croptarg.lta
+invert the first LTA before applying it 
+invert the output LTA
+Read individual LTAs
+Warning: dst volume of lta1 doesn't match src volume of lta2
+Volume geometry for lta1-dst: 
+volume geometry:
+extent  : (190, 189, 215)
+voxel   : ( 1.0000,  1.0000,  1.0000)
+x_(ras) : (-1.0000, -0.0000,  0.0000)
+y_(ras) : (-0.0000, -0.0000, -1.0000)
+z_(ras) : (-0.0000,  1.0000,  0.0000)
+c_(ras) : ( 0.1094, 15.1139,  4.5304)
+shears  : ( 0.0000,  0.0000,  0.0000)
+file    : none
+Volume geometry for lta2-src:
+volume geometry:
+extent  : (190, 189, 215)
+voxel   : ( 1.0000,  1.0000,  1.0000)
+x_(ras) : (-1.0000, -0.0000,  0.0000)
+y_(ras) : ( 0.0000,  0.0000, -1.0000)
+z_(ras) : ( 0.0000,  1.0000,  0.0000)
+c_(ras) : ( 0.1094, 15.1139,  4.5304)
+shears  : ( 0.0000,  0.0000,  0.0000)
+file    : /home/ubuntu/output/chess/0028316/mri/transforms/synthmorph.1.0mm.1.0mm/tmp/invol.crop.nii.gz
+Combining the two LTAs to get a RAS-to-RAS from src of LTA1 to dst of LTA2...
+Inverting output LTA
+Writing combined LTA to file /home/ubuntu/output/chess/0028316/mri/transforms/synthmorph.1.0mm.1.0mm/tmp/reg.invol_to_croptarg.lta...
+mri_concatenate_lta successful.
+@#@FSTIME  2025:05:12:01:41:51 mri_concatenate_lta N 5 e 0.00 S 0.00 U 0.00 P 100% M 5540 F 0 R 223 W 0 c 0 w 1 I 0 O 8 L 3.00 2.84 2.23
+@#@FSLOADPOST 2025:05:12:01:41:52 mri_concatenate_lta N 5 3.00 2.84 2.23
+
+
+
+mri_concatenate_lta -invert2 /usr/local/freesurfer/8.0.0//average/mni_icbm152_nlin_asym_09c/reg-targets/reg.1.0mm.to.1.0mm.cropped.lta /home/ubuntu/output/chess/0028316/mri/transforms/synthmorph.1.0mm.1.0mm/tmp/reg.invol_to_croptarg.lta /home/ubuntu/output/chess/0028316/mri/transforms/synthmorph.1.0mm.1.0mm/reg.targ_to_invol.lta
+invert the second LTA before applying it 
+Read individual LTAs
+Combining the two LTAs to get a RAS-to-RAS from src of LTA1 to dst of LTA2...
+Writing combined LTA to file /home/ubuntu/output/chess/0028316/mri/transforms/synthmorph.1.0mm.1.0mm/reg.targ_to_invol.lta...
+mri_concatenate_lta successful.
+@#@FSTIME  2025:05:12:01:41:52 mri_concatenate_lta N 4 e 0.00 S 0.00 U 0.00 P 100% M 5520 F 0 R 224 W 0 c 2 w 1 I 0 O 8 L 3.00 2.84 2.23
+@#@FSLOADPOST 2025:05:12:01:41:52 mri_concatenate_lta N 4 3.00 2.84 2.23
+
+
+
+lta_convert --invert --inlta /home/ubuntu/output/chess/0028316/mri/transforms/synthmorph.1.0mm.1.0mm/reg.targ_to_invol.lta --outlta /home/ubuntu/output/chess/0028316/mri/transforms/synthmorph.1.0mm.1.0mm/reg.invol_to_targ.lta
+8.0.0
+
+--invert: will invert transform.
+--inlta: /home/ubuntu/output/chess/0028316/mri/transforms/synthmorph.1.0mm.1.0mm/reg.targ_to_invol.lta input LTA transform.
+--outlta: /home/ubuntu/output/chess/0028316/mri/transforms/synthmorph.1.0mm.1.0mm/reg.invol_to_targ.lta output LTA.
+ LTA read, type : 1
+ 0.99579   0.02709  -0.06675   3.63089;
+-0.03675   0.90026  -0.12476   31.87173;
+ 0.05028   0.10814   0.88590  -5.77666;
+ 0.00000   0.00000   0.00000   1.00000;
+Writing  LTA to file /home/ubuntu/output/chess/0028316/mri/transforms/synthmorph.1.0mm.1.0mm/reg.invol_to_targ.lta...
+lta_convert successful.
+@#@FSTIME  2025:05:12:01:41:52 lta_convert N 5 e 0.00 S 0.00 U 0.00 P 100% M 6040 F 0 R 227 W 0 c 8 w 1 I 0 O 8 L 3.00 2.84 2.23
+@#@FSLOADPOST 2025:05:12:01:41:52 lta_convert N 5 3.00 2.84 2.23
+
+
+
+lta_convert --inlta /home/ubuntu/output/chess/0028316/mri/transforms/synthmorph.1.0mm.1.0mm/reg.invol_to_targ.lta --outmni /home/ubuntu/output/chess/0028316/mri/transforms/synthmorph.1.0mm.1.0mm/reg.invol_to_targ.xfm
+8.0.0
+
+--inlta: /home/ubuntu/output/chess/0028316/mri/transforms/synthmorph.1.0mm.1.0mm/reg.invol_to_targ.lta input LTA transform.
+--outmni: /home/ubuntu/output/chess/0028316/mri/transforms/synthmorph.1.0mm.1.0mm/reg.invol_to_targ.xfm output MNI/XFM matrix.
+ LTA read, type : 1
+ 0.99928  -0.03847   0.06987  -1.99859;
+ 0.03239   1.09107   0.15609  -33.99022;
+-0.06067  -0.13101   1.10577   10.78330;
+ 0.00000   0.00000   0.00000   1.00000;
+lta_convert successful.
+
+
+
+
+To check affine registration
+tkregisterfv --mov /home/ubuntu/output/chess/0028316/mri/orig.mgz --targ /usr/local/freesurfer/8.0.0//average/mni_icbm152_nlin_asym_09c/reg-targets/mni152.1.0mm.nii.gz --reg /home/ubuntu/output/chess/0028316/mri/transforms/synthmorph.1.0mm.1.0mm/reg.invol_to_targ.lta
+
+
+
+
+mri_synthmorph -m deform -t /home/ubuntu/output/chess/0028316/mri/transforms/synthmorph.1.0mm.1.0mm/tmp/deform.mgz -i /home/ubuntu/output/chess/0028316/mri/transforms/synthmorph.1.0mm.1.0mm/aff.lta /home/ubuntu/output/chess/0028316/mri/transforms/synthmorph.1.0mm.1.0mm/tmp/invol.crop.nii.gz /usr/local/freesurfer/8.0.0//average/mni_icbm152_nlin_asym_09c/reg-targets/mni152.1.0mm.cropped.nii.gz -j 1 -o /home/ubuntu/output/chess/0028316/mri/transforms/synthmorph.1.0mm.1.0mm/tmp/synthmorph.out.mgz
+#@# mri_synthmorph: deform, threads: 1, VmPeak: 15407116
+Thank you for choosing SynthMorph. Please cite us!
+
+SynthMorph: learning contrast-invariant registration without acquired images
+Hoffmann M, Billot B, Greve DN, Iglesias JE, Fischl B, Dalca AV
+IEEE Transactions on Medical Imaging, 41 (3), 543-558, 2022
+https://doi.org/10.1109/TMI.2021.3116879
+
+Anatomy-specific acquisition-agnostic affine registration learned from
+fictitious images
+Hoffmann M, Hoopes A, Fischl B*, Dalca AV* (*equal contribution)
+SPIE Medical Imaging: Image Processing, 12464, 1246402, 2023
+https://doi.org/10.1117/12.2653251
+https://synthmorph.io/#papers (PDF)
+
+Anatomy-aware and acquisition-agnostic joint registration with SynthMorph
+Hoffmann M, Hoopes A, Greve DN, Fischl B*, Dalca AV* (*equal contribution)
+Imaging Neuroscience, 2, 1-33, 2024
+https://doi.org/10.1162/imag_a_00197
+
+Website: https://synthmorph.io
+@#@FSTIME  2025:05:12:01:41:52 mri_synthmorph N 12 e 1087.94 S 51.55 U 1036.26 P 99% M 14167092 F 0 R 39800492 W 0 c 1771 w 371 I 96 O 117480 L 3.00 2.84 2.23
+@#@FSLOADPOST 2025:05:12:02:00:00 mri_synthmorph N 12 3.00 3.00 2.79
+
+
+mri_warp_convert --inras /home/ubuntu/output/chess/0028316/mri/transforms/synthmorph.1.0mm.1.0mm/tmp/deform.mgz --insrcgeom /home/ubuntu/output/chess/0028316/mri/transforms/synthmorph.1.0mm.1.0mm/tmp/invol.crop.nii.gz --outm3z /home/ubuntu/output/chess/0028316/mri/transforms/synthmorph.1.0mm.1.0mm/warp.to.mni152.1.0mm.1.0mm.nii.gz --vg-thresh 1e-5 --lta1-inv /home/ubuntu/output/chess/0028316/mri/transforms/synthmorph.1.0mm.1.0mm/tmp/reg.crop-to-invol.lta --lta2 /usr/local/freesurfer/8.0.0//average/mni_icbm152_nlin_asym_09c/reg-targets/reg.1.0mm.cropped.to.1.0mm.lta
+8.0.0
+
+--inras: /home/ubuntu/output/chess/0028316/mri/transforms/synthmorph.1.0mm.1.0mm/tmp/deform.mgz input RAS warp.
+--insrcgeom: /home/ubuntu/output/chess/0028316/mri/transforms/synthmorph.1.0mm.1.0mm/tmp/invol.crop.nii.gz atlas/source image (used for geometry).
+--outm3z: /home/ubuntu/output/chess/0028316/mri/transforms/synthmorph.1.0mm.1.0mm/warp.to.mni152.1.0mm.1.0mm.nii.gz output M3Z.
+Setting vg_isEqual_Threshold to 0.000010
