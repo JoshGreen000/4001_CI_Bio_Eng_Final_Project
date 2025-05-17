@@ -1,0 +1,128 @@
+🔄 Processing 0028200
+Warning: An input intended to be a single 3D volume has multiple timepoints. Input will be truncated to first volume, but this functionality is deprecated and will be removed in a future release.
+Warning: An input intended to be a single 3D volume has multiple timepoints. Input will be truncated to first volume, but this functionality is deprecated and will be removed in a future release.
+INFO: using NIfTI-1 sform (sform_code=4)
+srcvol = /home/ubuntu/output/emotion_chess/0028200/bold_mni.nii.gz
+srcreg unspecified
+srcregold = 0
+srcwarp unspecified
+surf = white
+hemi = lh
+trgsubject = fsaverage
+surfreg = sphere.reg
+ProjFrac = 0.5
+thickness = thickness
+reshape = 0
+interp = nearest
+float2int = round
+GetProjMax = 0
+INFO: float2int code = 0
+Done loading volume
+Computing registration from header.
+  Using /home/ubuntu/output/chess/fsaverage/mri/orig.mgz as target reference.
+-------- original matrix -----------
+ 1.00000   0.00000   0.00000   1.00000;
+ 0.00000   0.00000   1.00000  -19.00000;
+ 0.00000  -1.00000   0.00000  -17.00000;
+ 0.00000   0.00000   0.00000   1.00000;
+-------- original matrix -----------
+Reading surface /home/ubuntu/output/chess/fsaverage/surf/lh.white
+Done reading source surface
+Reading thickness /home/ubuntu/output/chess/fsaverage/surf/lh.thickness
+Done
+Mapping Source Volume onto Source Subject Surface
+Projecting 0.5 0.5 1
+ 1 0.5 0.5 0.5
+using old
+Done mapping volume to surface
+Number of source voxels hit = 22677
+Writing to /home/ubuntu/output/emotion_chess/0028200/lh.bold_on_fsaverage.mgh
+Dim: 163842 1 1
+mri_vol2surf done
+INFO: using NIfTI-1 sform (sform_code=4)
+srcvol = /home/ubuntu/output/emotion_chess/0028200/bold_mni.nii.gz
+srcreg unspecified
+srcregold = 0
+srcwarp unspecified
+surf = white
+hemi = rh
+trgsubject = fsaverage
+surfreg = sphere.reg
+ProjFrac = 0.5
+thickness = thickness
+reshape = 0
+interp = nearest
+float2int = round
+GetProjMax = 0
+INFO: float2int code = 0
+Done loading volume
+Computing registration from header.
+  Using /home/ubuntu/output/chess/fsaverage/mri/orig.mgz as target reference.
+-------- original matrix -----------
+ 1.00000   0.00000   0.00000   1.00000;
+ 0.00000   0.00000   1.00000  -19.00000;
+ 0.00000  -1.00000   0.00000  -17.00000;
+ 0.00000   0.00000   0.00000   1.00000;
+-------- original matrix -----------
+Reading surface /home/ubuntu/output/chess/fsaverage/surf/rh.white
+Done reading source surface
+Reading thickness /home/ubuntu/output/chess/fsaverage/surf/rh.thickness
+Done
+Mapping Source Volume onto Source Subject Surface
+Projecting 0.5 0.5 1
+ 1 0.5 0.5 0.5
+using old
+Done mapping volume to surface
+Number of source voxels hit = 22527
+Writing to /home/ubuntu/output/emotion_chess/0028200/rh.bold_on_fsaverage.mgh
+Dim: 163842 1 1
+mri_vol2surf done
+
+8.0.0
+cwd 
+cmdline mri_segstats --annot fsaverage lh aparc --i /home/ubuntu/output/emotion_chess/0028200/lh.bold_on_fsaverage.mgh --sum /home/ubuntu/output/emotion_chess/0028200/lh_fsavg_segstats.txt 
+sysname  Linux
+hostname 9cc122b6-33ec-4f6b-b5dd-def3a54d968a-rammri
+machine  x86_64
+user     ubuntu
+whitesurfname  white
+UseRobust  0
+Constructing seg from annotation
+
+Reading annotation /home/ubuntu/output/chess/fsaverage/label/lh.aparc.annot
+Seg base 1000
+MRISannot2seg(): nhits = 149955
+Loading /home/ubuntu/output/emotion_chess/0028200/lh.bold_on_fsaverage.mgh
+Vertex Area is 0.501825 mm^3
+Generating list of segmentation ids
+Found  36 segmentations
+Computing statistics for each segmentation
+
+Reporting on  35 segmentations
+Using PrintSegStat
+mri_segstats done
+
+8.0.0
+cwd 
+cmdline mri_segstats --annot fsaverage rh aparc --i /home/ubuntu/output/emotion_chess/0028200/rh.bold_on_fsaverage.mgh --sum /home/ubuntu/output/emotion_chess/0028200/rh_fsavg_segstats.txt 
+sysname  Linux
+hostname 9cc122b6-33ec-4f6b-b5dd-def3a54d968a-rammri
+machine  x86_64
+user     ubuntu
+whitesurfname  white
+UseRobust  0
+Constructing seg from annotation
+
+Reading annotation /home/ubuntu/output/chess/fsaverage/label/rh.aparc.annot
+Seg base 2000
+MRISannot2seg(): nhits = 149926
+Loading /home/ubuntu/output/emotion_chess/0028200/rh.bold_on_fsaverage.mgh
+Vertex Area is 0.501505 mm^3
+Generating list of segmentation ids
+Found  36 segmentations
+Computing statistics for each segmentation
+
+Reporting on  35 segmentations
+Using PrintSegStat
+mri_segstats done
+✅ Finished 0028200
