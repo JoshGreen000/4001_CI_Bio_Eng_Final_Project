@@ -1,0 +1,13 @@
+Logfile for bbregister
+Sun May  4 06:13:59 UTC 2025
+
+setenv SUBJECTS_DIR /home/ubuntu/output/chess
+cd /home/ubuntu
+/usr/local/freesurfer/8.0.0//bin/bbregister --s 0028197 --mov /home/ubuntu/output/chess/0028197/mri/rawavg2orig.lta --reg register.dat --init-fsl --bold
+
+bbregister 8.0.0
+Linux 9cc122b6-33ec-4f6b-b5dd-def3a54d968a-rammri 5.15.0-127-generic #137-Ubuntu SMP Fri Nov 8 15:21:01 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
+FREESURFER_HOME /usr/local/freesurfer/8.0.0/
+mri_convert /home/ubuntu/output/chess/0028197/mri/rawavg2orig.lta ./tmp.bbregister.29370/template.nii
+mri_convert /home/ubuntu/output/chess/0028197/mri/rawavg2orig.lta ./tmp.bbregister.29370/template.nii 
+ERROR: cannot determine file type for /home/ubuntu/output/chess/0028197/mri/rawavg2orig.lta 

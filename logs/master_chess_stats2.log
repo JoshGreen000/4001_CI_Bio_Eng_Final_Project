@@ -1,0 +1,47 @@
+nohup: ignoring input
+🔧 Gathering stats from: /home/ubuntu/output/chess
+📁 Necessary CSVs will be in: ./combined_csv
+✅ Subjects to include: 0028197 0028198 0028199 0028200 0028201 0028202 0028203 0028204 0028205 0028206 0028207 0028208 0028209 0028210 0028211 0028212 0028213 0028214 0028215 0028216 0028217 0028218 0028219 0028220 0028221 0028222 0028223 0028224 0028225 0028297 0028298 0028299 0028300 0028301 0028302 0028303 0028304 0028305 0028306 0028307 0028308 0028309 0028310 0028311 0028312 0028313 0028314 0028315 0028316 0028317 0028318 0028319 0028320 0028321 0028322 0028323 0028324 0028325 
+SUBJECTS_DIR : /home/ubuntu/output/chess
+Parsing the .stats files
+Building the table..
+Writing the table to ./combined_csv/lh_thickness.csv
+SUBJECTS_DIR : /home/ubuntu/output/chess
+Parsing the .stats files
+Building the table..
+Writing the table to ./combined_csv/rh_thickness.csv
+SUBJECTS_DIR : /home/ubuntu/output/chess
+Parsing the .stats files
+Building the table..
+Writing the table to ./combined_csv/lh_area.csv
+SUBJECTS_DIR : /home/ubuntu/output/chess
+Parsing the .stats files
+Building the table..
+Writing the table to ./combined_csv/rh_area.csv
+SUBJECTS_DIR : /home/ubuntu/output/chess
+Parsing the .stats files
+Building the table..
+Writing the table to ./combined_csv/lh_volume.csv
+SUBJECTS_DIR : /home/ubuntu/output/chess
+Parsing the .stats files
+Building the table..
+Writing the table to ./combined_csv/rh_volume.csv
+SUBJECTS_DIR : /home/ubuntu/output/chess
+Parsing the .stats files
+Building the table..
+Writing the table to ./combined_csv/lh_meancurv.csv
+SUBJECTS_DIR : /home/ubuntu/output/chess
+Parsing the .stats files
+Building the table..
+Writing the table to ./combined_csv/rh_meancurv.csv
+SUBJECTS_DIR : /home/ubuntu/output/chess
+Parsing the .stats files
+Building the table..
+Writing the table to ./combined_csv/aseg_volume.csv
+🔄 Merging CSVs...
+🔍 Loading CSVs for merge...
+⚠️ Merge with file 'master_features.csv' dropped 1 subjects:
+   ⛔ 0028197
+
+🧠 Subjects included in final merged data: ['0028198', '0028199', '0028200', '0028201', '0028202', '0028203', '0028204', '0028205', '0028206', '0028207', '0028208', '0028209', '0028210', '0028211', '0028212', '0028213', '0028214', '0028215', '0028216', '0028217', '0028218', '0028219', '0028220', '0028221', '0028222', '0028223', '0028224', '0028225', '0028297', '0028298', '0028299', '0028300', '0028301', '0028302', '0028303', '0028304', '0028305', '0028306', '0028307', '0028308', '0028309', '0028310', '0028311', '0028312', '0028313', '0028314', '0028315', '0028316', '0028317', '0028318', '0028319', '0028320', '0028321', '0028322', '0028323', '0028324', '0028325']
+✅ Master CSV saved at ./combined_csv/master_features.csv
