@@ -1,6 +1,6 @@
 ## Source
-- [[4001 Project Report.pdf]]
-- [[4720 EEG Emotion Paper.pdf]]
+- [[4001 Presentation/4001 Project Report.pdf]]
+- [[4001 Presentation/4720 EEG Emotion Paper.pdf]]
 - 4001 Presentation.pptx
 
 **Abstract**  

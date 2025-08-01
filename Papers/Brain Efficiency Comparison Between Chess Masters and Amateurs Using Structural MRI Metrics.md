@@ -1,5 +1,5 @@
 ## Source
-- [[brain_efficiency_comparison_report.pdf]]
+- [[4001 Presentation/brain_efficiency_comparison_report.pdf]]
 
 **Abstract**  
 This study investigates structural brain differences between chess masters and control participants using features derived from structural magnetic resonance imaging (sMRI). We analyzed cortical thickness and volumetric data extracted with FreeSurfer to assess brain efficiency across two matched groups. Key brain regions involved in executive control and spatial reasoning, including the precuneus and superior frontal gyrus, were found to exhibit statistically significant differences in cortical thickness. Our results support the hypothesis that expert-level cognitive training correlates with increased structural specialization, with implications for understanding neuroplasticity and performance.
